@@ -40,12 +40,11 @@ public class Main extends PApplet {
             allTests.add(new TestData(test));
         }
 
-        /*
-        Collections.sort(allTests, (a, b) -> a.getAttempt() > b.getAttempt() ? 1 : -1);
+        // Sorting test
+        allTests.sort((a, b) -> a.attempt - b.attempt);
         for (TestData data : allTests) {
             println(data.attempt);
         }
-        */
 
         smooth(4);
         noLoop();
