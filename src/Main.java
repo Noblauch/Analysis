@@ -8,14 +8,14 @@ import processing.data.JSONObject;
 public class Main extends PApplet {
 
     public static void main(String[] args){
-        //PApplet.main("Main");
+        PApplet.main("Main");
 
         //Main sketch = new Main();
         //PApplet.runSketch(new String[]{"--location=0,0", ""}, sketch);
 
-        String[] processingArgs = {"Main"};
-        Main mySketch = new Main();
-        PApplet.runSketch(processingArgs, mySketch);
+        //String[] processingArgs = {"Main"};
+        //Main mySketch = new Main();
+        //PApplet.runSketch(processingArgs, mySketch);
     }
 
     // Filters
@@ -48,6 +48,9 @@ public class Main extends PApplet {
 
         smooth(4);
         noLoop();
+    }
+
+    public void setup() {
         taskTime = new BarChart(this);
         taskErrors = new BarChart(this);
         inTaskPackage = new GTextField(this, 0, 0, 150, 20);
